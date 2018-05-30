@@ -12,7 +12,7 @@ if nb_canaux==3
 end
 I = double(I);
 I = I/max(I(:));
-figure('Name','Champ de force externe de base','Position',[0.05*L,0.05*H,0.9*L,0.7*H]);
+figure('Name','Champ de force externe ','Position',[0.05*L,0.05*H,0.9*L,0.7*H]);
 subplot(1,2,1);
 imagesc(I);
 colormap gray;
@@ -49,6 +49,6 @@ Fx_normalise_quiver = Fx_normalise(1:pas_fleches:nb_lignes,1:pas_fleches:nb_colo
 Fy_normalise_quiver = Fy_normalise(1:pas_fleches:nb_lignes,1:pas_fleches:nb_colonnes);
 hq = quiver(x,y,Fx_normalise_quiver,Fy_normalise_quiver,taille_fleches);
 set(hq,'LineWidth',1,'Color',[1,0,0]);
-title('Champ de force externe de base','FontSize',20);
+title('Champ de force externe ','FontSize',20);
 
 save force_externe;

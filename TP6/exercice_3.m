@@ -5,7 +5,7 @@ L = taille_ecran(3);
 H = taille_ecran(4);
 
 % Lecture et affichage de l'image a segmenter :
-I = imread('pears.png');
+I = imread('coins.png');
 [nb_lignes,nb_colonnes,nb_canaux] = size(I);
 if nb_canaux==3
 	I = rgb2gray(I);
@@ -37,7 +37,7 @@ while k < max_iter
     Fx = Fx - gamma_gvf*( (Fx0.*Fx0 + Fy0.*Fy0).*(Fx - Fx0) - mu_gvf* del2(Fx));
     Fy = Fy - gamma_gvf*( (Fx0.*Fx0 + Fy0.*Fy0).*(Fy - Fy0) - mu_gvf* del2(Fy));
 
-    k = k+1
+    k = k+1;
     
 end
 
